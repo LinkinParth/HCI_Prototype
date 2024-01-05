@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.language-icons button {
+    margin-left: 10px;
+}
+
+.timer {
+    margin-right: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.meal-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
