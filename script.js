@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateTimer();
 });
+
+
+function handleProfileImages() {
+    document.querySelector('.additional-buttons').style.display = 'flex';
+}

@@ -23,6 +23,32 @@ header {
 
 .clickable-image-profile {
     margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    color: #fff;
+}
+
+.additional-buttons {
+    display: none;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.additional-buttons button{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
 }
 
 .language-icons {
