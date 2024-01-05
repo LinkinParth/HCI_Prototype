@@ -36,35 +36,71 @@ main {
     padding: 20px;
 }
 
-.meal-box {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-    box-sizing: border-box; /* Include padding in width calculation */
+.language-icons button.selected {
+    background-color: #3498db;
+    color: #fff;
 }
 
-.dropdown {
+.meal-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.menu-title {
+    font-size: 18px;
+    margin-top: 0;
+    color: #333;
+}
+
+.meal-item {
+    text-align: center;
     position: relative;
+    margin-bottom: 20px;
+}
+
+.meal-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.menu-price {
+    color: #3498db;
+    margin-top: 5px;
+}
+
+.menu-tags {
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 14px;
     display: inline-block;
 }
 
-.dropbtn {
+.meal-info {
+    position: relative;
+    margin-top: 10px;
+}
+
+.show-info-btn {
     padding: 10px;
     background-color: #3498db;
     color: #fff;
     border: none;
+    cursor: pointer;
 }
 
-.dropdown-content {
+.meal-details {
     display: none;
-    position: absolute;
+    padding: 10px;
     background-color: #f9f9f9;
-    min-width: 160px;
+    border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.show-info-btn:hover + .meal-details {
     display: block;
 }
