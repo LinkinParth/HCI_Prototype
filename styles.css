@@ -21,6 +21,15 @@ header {
     background-color: #fff;
 }
 
+.clickable-image-profile {
+    margin-right: 20px;
+}
+
+.language-icons {
+    margin-left: auto;
+    margin-right: 700px;
+}
+
 .language-icons button {
     margin-left: 10px;
 }
