@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var timerElement = document.getElementById('timer');
-    var seconds = 5; // Change this to the desired countdown time
+    var seconds = 60; // Change this to the desired countdown time
 
     function updateTimer() {
         timerElement.textContent = seconds + 's';

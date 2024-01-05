@@ -72,13 +72,31 @@ main {
 }
 
 .menu-tags {
-    color: #fff;
-    background-color: #3498db;
-    border-radius: 12px;
-    padding: 5px 10px;
-    font-size: 14px;
-    display: inline-block;
+    margin-top: 10px;
 }
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.tag.vegan {
+    background-color: #66BB6A; /* Green color for vegan */
+}
+
+.tag.gluten-free {
+    background-color: #FFB74D; /* Orange color for gluten-free */
+}
+
+.tag.other {
+    background-color: #42A5F5; /* Blue color for other tags */
+}
+
+/* Add more classes and colors for additional tags as needed */
+
 
 .meal-info {
     position: relative;
