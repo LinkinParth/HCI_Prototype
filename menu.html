@@ -8,26 +8,80 @@
 </head>
 <body>
 
-<header>
-    <div class="menu-bar">
-        <div class="settings-icon"><img src="" alt=""></div>
-        <div class="language-icons">
-            <button id="german-btn">DE</button>
-            <button id="english-btn">EN</button>
-            <button id="independent-btn">Independent</button>
+    <header>
+        <div class="menu-bar">
+            <div class="settings-icon" onclick="toggleSettingsMenu"></div>
+            <div class="language-icons">
+                <button id="german-btn">DE</button>
+                <button id="english-btn">EN</button>
+                <button id="independent-btn">Independent</button>
+            </div>
+            <div id="timer" class="timer">60s</div>
         </div>
-        <button class="clickable-image-profile" onclick="handleProfileImages()">
-            <img class="profile-icon" src="" alt="Profile">
-        </button>
-        <div class="additional-buttons">
-            <button onclick="createProfile()">Create new profile</button>
-            <button onclick="modificarerofile()">Modificare profile</button>
+        <div class="settings-menu" id="settingsMenu">
+            <!-- Add settings menu content here -->
+            <ul>
+                <li>New</li>
+                <li>Edit</li>
+            </ul>
         </div>
-        <div id="timer" class="timer">60s</div>
-    </div>
-</header>
+    </header>
 
 <main>
+    <div class="meal-item">
+        <h2 class="menu-title">Example  </h2>
+        <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">
+        <p class="menu-price">X Euro</p>
+        <div class="menu-tags">
+            <span class="tag vegan">Vegan</span>
+            <span class="tag gluten-free">Gluten-free</span>
+            <span class="tag other">Other</span>
+            <!-- Add more tags as needed with their respective classes -->
+        </div>
+        <div class="meal-info">
+            <button class="show-info-btn">Show Info</button>
+            <div class="meal-details">
+                <p>Nährwertangaben einfügen </p>
+                <!-- Add more meal information here -->
+            </div>
+        </div>
+    </div>
+    <div class="meal-item">
+        <h2 class="menu-title">Example  </h2>
+        <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">
+        <p class="menu-price">X Euro</p>
+        <div class="menu-tags">
+            <span class="tag vegan">Vegan</span>
+            <span class="tag gluten-free">Gluten-free</span>
+            <span class="tag other">Other</span>
+            <!-- Add more tags as needed with their respective classes -->
+        </div>
+        <div class="meal-info">
+            <button class="show-info-btn">Show Info</button>
+            <div class="meal-details">
+                <p>Nährwertangaben einfügen </p>
+                <!-- Add more meal information here -->
+            </div>
+        </div>
+    </div>
+    <div class="meal-item">
+        <h2 class="menu-title">Example  </h2>
+        <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">
+        <p class="menu-price">X Euro</p>
+        <div class="menu-tags">
+            <span class="tag vegan">Vegan</span>
+            <span class="tag gluten-free">Gluten-free</span>
+            <span class="tag other">Other</span>
+            <!-- Add more tags as needed with their respective classes -->
+        </div>
+        <div class="meal-info">
+            <button class="show-info-btn">Show Info</button>
+            <div class="meal-details">
+                <p>Nährwertangaben einfügen </p>
+                <!-- Add more meal information here -->
+            </div>
+        </div>
+    </div>
     <div class="meal-item">
         <h2 class="menu-title">Example  </h2>
         <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">

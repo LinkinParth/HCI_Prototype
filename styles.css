@@ -1,11 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #20212c;
+    color: #ffffff;
     padding: 10px;
 }
 
@@ -72,12 +73,12 @@ main {
 }
 
 .language-icons button.selected {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #000000;
+    color: #000000;
 }
 
 .meal-item {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 8px;
     padding: 10px;
 }
@@ -85,7 +86,7 @@ main {
 .menu-title {
     font-size: 18px;
     margin-top: 0;
-    color: #333;
+    color: #000000;
 }
 
 .meal-item {
@@ -102,7 +103,7 @@ main {
 }
 
 .menu-price {
-    color: #3498db;
+    color: #000000;
     margin-top: 5px;
 }
 
@@ -162,4 +163,41 @@ main {
 
 .show-info-btn:hover + .meal-details {
     display: block;
+}
+
+.settings-icon {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    background-image: url('res/settings.png'); /* Replace with your image URL */
+    background-size: contain; /* Display the image at its original size without being zoomed in */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-color: transparent; /* Make the background color transparent */
+    border: none; /* Remove any border that may be present */
+    cursor: pointer; /* Add cursor pointer for indicating interactivity */
+}
+
+.settings-menu {
+    display: none;
+    position: absolute;
+    top: 40px; /* Adjust the top position as needed */
+    right: 10px;
+    background-color: #ffffff00;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.settings-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.settings-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.settings-menu li:hover {
+    background-color: #f0f0f0;
 }
