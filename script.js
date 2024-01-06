@@ -30,3 +30,6 @@ document.addEventListener('click', function (event) {
     }
 });
 
+function handleImageClick() {
+    document.querySelector('.additional-buttons').style.display = 'flex';
+}

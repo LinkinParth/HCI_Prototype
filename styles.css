@@ -23,7 +23,7 @@ header {
 }
 
 .clickable-image-profile {
-    margin-right: 20px;
+    margin-right: 0;
     cursor: pointer;
     border: none;
     padding: 0;
@@ -31,11 +31,20 @@ header {
     color: #fff;
 }
 
+.profile-icon {
+    margin-left: auto;
+    margin-right: 50px;
+    width: auto;
+    height: auto;
+}
+
 .additional-buttons {
     display: none;
     flex-direction: column;
     top: 100%;
     left: 0;
+    margin-left: 1700px;
+    margin-right: 60px;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -43,7 +52,7 @@ header {
 }
 
 .additional-buttons button{
-    width: 100%;
+    width: 10px;
     padding: 10px;
     text-align: left;
     border: none;
@@ -54,7 +63,7 @@ header {
 
 .language-icons {
     margin-left: auto;
-    margin-right: 700px;
+    margin-right: 680px;
 }
 
 .language-icons button {
