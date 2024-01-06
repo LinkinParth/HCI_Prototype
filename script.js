@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateTimer();
 });
+
+function toggleSettingsMenu() {
+    var settingsMenu = document.getElementById('settingsMenu');
+    settingsMenu.style.display = (settingsMenu.style.display === 'block') ? 'none' : 'block';
+}
+
+// Close the settings menu if clicked outside of it
+document.addEventListener('click', function (event) {
+    var settingsMenu = document.getElementById('settingsMenu');
+    if (event.target !== settingsMenu && !settingsMenu.contains(event.target)) {
+        settingsMenu.style.display = 'none';
+    }
+});
+
