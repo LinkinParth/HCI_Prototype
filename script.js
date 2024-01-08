@@ -30,15 +30,31 @@ document.addEventListener('click', function (event) {
     }
 });
 
-function handleImageClick() {
-    document.querySelector('.additional-buttons').style.display = 'flex';
-}
+function toggleSplitScreen() {
+    var checkbox = document.getElementById('splitScreenCheckbox');
+    var mainContent = document.querySelector('main');
 
-function Create() {
-    window.location.href = 'create.html';
-}
+    if (checkbox.checked) {
+        // Create left and right sections for split-screen effect
+        var leftSection = document.createElement('div');
+        leftSection.classList.add('split-section', 'left-section');
+        leftSection.innerHTML = mainContent.innerHTML;
 
-function Edit() {
-    window.location.href = 'edit.html';
-}
+        var rightSection = document.createElement('div');
+        rightSection.classList.add('split-section', 'right-section');
+        rightSection.innerHTML = mainContent.innerHTML;
 
+        // Add a visible border in the middle
+        var border = document.createElement('div');
+        border.classList.add('split-border');
+
+        // Replace main content with left and right sections
+        mainContent.innerHTML = '';
+        mainContent.appendChild(leftSection);
+        mainContent.appendChild(border);
+        mainContent.appendChild(rightSection);
+    } else {
+        // Reset to the original state
+        mainContent.innerHTML = '<div class="meal-item">...</div>';
+    }
+}
