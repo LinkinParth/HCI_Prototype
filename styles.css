@@ -132,6 +132,10 @@ main {
     background-color: #66BB6A; /* Green color for vegan */
 }
 
+.tag.vegie {
+    background-color: #06530a; /* Green color for vegan */
+}
+
 .tag.gluten-free {
     background-color: #FFB74D; /* Orange color for gluten-free */
 }
@@ -209,4 +213,28 @@ main {
 
 .settings-menu li:hover {
     background-color: #f0f0f0;
+}
+
+.split-section {
+    display: inline-block;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.left-section {
+    float: left;
+}
+
+.right-section {
+    float: right;
+}
+
+.split-border {
+    border-left: 2px solid #ccc;
+    height: 100%;
+    margin-left: -2px; /* Compensate for the border width */
+}
+
+.split-screen main {
+    justify-content: center; /* Center items horizontally in split-screen mode */
 }
