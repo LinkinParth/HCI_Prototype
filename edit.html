@@ -5,8 +5,30 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="EditProfile">
-        <h1>Edit your Profile</h1>
-    </div>
+    <h1>Edit your Profile</h1>
+
+    <img class="username-icon" src="res/profile-icon-png-908.png" alt="Profile-img">
+            <p id="username">Dein Name</p>
+        <form id="profile-form" onsubmit="return false;">
+            <label for="username-input">Ändere deinen Namen: </label>
+            <input type="text" id="username-input" placeholder="Dein Name">
+            
+
+            <label for="allergien-select">Allergien: </label>
+            <select id="allergien-select" multiple>
+                <option value="gluten">Gluten</option>
+                <option value="nüsse">Nüsse</option>
+            </select>
+
+            <label for="preferenzen-select">Präferenzen: </label>
+            <select id="preferenzen-select" multiple>
+                <option value="fleisch">Fleisch</option>
+                <option value="vegetarisch">Vegetarisch</option>
+                <option value="vegan">Vegan</option>
+            </select>
+            
+            <button type="button" onclick="speichern()">speichern</button>
+        </form>
 </body>
+<script src="scriptforcreate.js"></script>
 </html>

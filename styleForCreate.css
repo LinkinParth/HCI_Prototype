@@ -1,0 +1,53 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.CreateProfile {
+    display: flex;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    flex-direction: row;
+}
+
+.username-icon {
+    border-radius: 50%;
+    max-width: 200px;
+    height: 50px;
+    margin-top: 200px;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#username-input {
+    width: 60%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+#allergien-select, #preferenzen-select {
+    width: 60%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+#aktualisieren-btn {
+    padding: 8px;
+}
