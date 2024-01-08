@@ -30,6 +30,18 @@ document.addEventListener('click', function (event) {
     }
 });
 
+function handleImageClick() {
+    document.querySelector('.additional-buttons').style.display = 'flex';
+}
+
+function Create() {
+    window.location.href = 'create.html';
+}
+
+function Edit() {
+    window.location.href = 'edit.html';
+}
+
 function toggleSplitScreen() {
     var checkbox = document.getElementById('splitScreenCheckbox');
     var mainContent = document.querySelector('main');
