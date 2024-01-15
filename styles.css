@@ -206,9 +206,12 @@ main {
 }
 
 .left-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin-right: 5px; /* Adjust margin as needed */
+    margin-right: 0.5%; /* Adjust margin as needed */
+}
+
+.split-border {
+    position: absolute;
+    height: 100%;
+    width: 2px; /* Adjust the width of the border */
+    background-color: #333; /* Adjust the border color */
 }
