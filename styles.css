@@ -16,12 +16,6 @@ header {
     align-items: center;
 }
 
-.settings-icon {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-}
-
 .clickable-image-profile {
     margin-right: 0;
     cursor: pointer;
@@ -59,15 +53,6 @@ header {
     background: none;
     border-bottom: 1px solid #eee;
     cursor: pointer;
-}
-
-.language-icons {
-    margin-left: auto;
-    margin-right: 680px;
-}
-
-.language-icons button {
-    margin-left: 10px;
 }
 
 .timer {
@@ -178,43 +163,6 @@ main {
     display: block;
 }
 
-.settings-icon {
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    background-image: url('res/settings.png'); /* Replace with your image URL */
-    background-size: contain; /* Display the image at its original size without being zoomed in */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-color: transparent; /* Make the background color transparent */
-    border: none; /* Remove any border that may be present */
-    cursor: pointer; /* Add cursor pointer for indicating interactivity */
-}
-
-.settings-menu {
-    display: none;
-    position: absolute;
-    top: 40px; /* Adjust the top position as needed */
-    right: 10px;
-    background-color: #ffffff00;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-}
-
-.settings-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.settings-menu li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.settings-menu li:hover {
-    background-color: #f0f0f0;
-}
-
 .split-section {
     display: inline-block;
     width: 50%;
@@ -238,3 +186,54 @@ main {
 .split-screen main {
     justify-content: center; /* Center items horizontally in split-screen mode */
 }
+
+/* styles for the hamburger menu */
+.hamburger-menu {
+    width: 30px;
+    height: 30px;
+    background: url('https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    visibility: visible;
+  }
+
+  .hamburger-menu-side-menu {
+    position: absolute;
+    top: 25px; /* Adjust the top position as needed */
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background: url('https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg') no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    visibility: visible;
+  }
+  
+  /* styles for the side menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Offscreen initially */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 50px; /* Adjust based on your header height */
+    transition: left 0.3s ease;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu li {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #555;
+  }
+
+  
+  
+  

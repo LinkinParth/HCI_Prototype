@@ -10,32 +10,24 @@
 
     <header>
         <div class="menu-bar">
-            <div class="settings-icon" onclick="toggleSettingsMenu()"></div>
-            <div class="language-icons">
-                <button id="german-btn">DE</button>
-                <button id="english-btn">EN</button>
-                <button id="independent-btn">Independent</button>
+            <div class="hamburger-menu" onclick="toggleSideMenu()"></div>
+            <div id="sideMenu" class="side-menu">
+                <div class="hamburger-menu-side-menu" onclick="collapseSideMenu()"></div>
+                <ul>
+                    <li onclick="openUserProfile()">User Profile</li>
+                    <li onclick="openLanguageMenu()">Language</li>
+                    <li onclick="openSettingsMenu()">Settings</li>
+                    <li onclick="openSimulationMenu()">Simulation</li>
+                </ul>
             </div>
             <button class="clickable-image-profile" onclick="handleImageClick()">
                 <img class="profile-icon" src="res/profile.svg" alt="Profile">
             </button>
             <div id="timer" class="timer">60s</div>
         </div>
-        <div class="settings-menu" id="settingsMenu">
-            <ul>
-                <li>New</li>
-                <li>Edit</li>
-            </ul>
-        </div>
-        <div class="additional-buttons">
-            <button onclick="Create()">Create</button>
-            <button onclick="Edit()">Edit</button>
-        </div>
-        <label for="splitScreenCheckbox">Enable Split Screen</label>
-        <input type="checkbox" id="splitScreenCheckbox" onchange="toggleSplitScreen()">
     </header>
 
-    <main class="split-screen">
+    <main class="main-content">
         <div class="meal-item">
             <h2 class="menu-title">Gemischter Salat </h2>
             <img class="meal-image" src="https://ess-dich-lecker.de/wp-content/uploads/2019/03/Gemischter-Salat.jpg" alt="Wiener Schnitzel">

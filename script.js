@@ -70,3 +70,75 @@ function toggleSplitScreen() {
         mainContent.innerHTML = '<div class="meal-item">...</div>';
     }
 }
+
+// Function to toggle the side menu
+function toggleSideMenu() {
+    var sideMenu = document.getElementById('sideMenu');
+    sideMenu.style.left = (sideMenu.style.left === '0px') ? '-250px' : '0';
+}
+
+// Function to open the user profile
+function openUserProfile() {
+ // Add your logic for opening the user profile
+}
+  
+// Function to open the language menu
+function openLanguageMenu() {
+// Add your logic for opening the language menu
+}
+  
+// Function to open the settings menu
+function openSettingsMenu() {
+// Add your logic for opening the settings menu
+}
+  
+// Function to open the simulation menu
+function openSimulationMenu() {
+// Add your logic for opening the simulation menu
+}
+  
+let sideMenuOpen = false;
+
+function toggleSideMenu() {
+    const sideMenu = document.querySelector('.side-menu'); // Use querySelector to select by class
+    const mainContent = document.querySelector('.main-content');
+
+    sideMenuOpen = !sideMenuOpen;
+
+    if (sideMenuOpen) {
+        sideMenu.style.left = '0'; // Adjust the left property
+        mainContent.style.marginLeft = '250px'; // Adjust the margin as needed
+    } else {
+        sideMenu.style.left = '-250px'; // Adjust the left property
+        mainContent.style.marginLeft = '0';
+    }
+}
+
+function collapseSideMenu() {
+    const sideMenu = document.getElementById('sideMenu');
+    const mainContent = document.querySelector('.main-content');
+    
+    sideMenu.style.left = '-250px'; // Adjust based on your sidebar width
+    sideMenuOpen = false;
+    
+    mainContent.style.marginLeft = '0';
+    
+}
+
+function openUserProfile() {
+    // Handle opening user profile
+}
+
+function openLanguageMenu() {
+    // Handle opening language menu
+}
+
+function openSettingsMenu() {
+    // Handle opening settings menu
+}
+
+function openSimulationMenu() {
+    // Handle opening simulation menu
+}
+
+  
