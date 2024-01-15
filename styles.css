@@ -40,6 +40,12 @@ main {
     padding: 10px;
 }
 
+.meal-item.highlighted {
+    background-color: yellow; /* Ändere die Hintergrundfarbe nach Bedarf */
+    border: 2px solid red; /* Ändere den Rand nach Bedarf */
+}
+
+
 .menu-title {
     font-size: 18px;
     margin-top: 0;
