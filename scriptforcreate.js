@@ -1,25 +1,26 @@
 function setUsername() {
-    var username = document.getElementById("username-input").value; 
+    var username = document.getElementById("username-input").value;
     document.getElementById("username").textContent = username;
 
     var allergien = getSelectedOptions("allergien-select");
     var preferenzen = getSelectedOptions("preferenzen-select");
     var bestätigung = confirm("Möchtest du das Profil erstellen?");
 
-    saveProfileData(username, allergien, preferenzen);
-
     console.log("Ausgewählte Allergien:", allergien);
     console.log("Ausgewählte Präferenzen:", preferenzen);
 
-    if (bestätigung) {
-        highlightMatchingMeals(allergien, preferenzen);
-        window.location.href = 'menu.html';
-    }else {
-        console.log("Profil nicht regestriert!");
-    }
+    // Call the highlightMatchingMeals function with selected allergies and preferences
+    highlightMatchingMeals(allergien, preferenzen);
 
-    
+    if (bestätigung) {
+        window.location.href = 'menu.html';
+    } else {
+        console.log("Profil nicht registriert!");
+    }
 }
+
+
+
 
 function speichern() {
     var username = document.getElementById("username-input").value; 
@@ -28,8 +29,6 @@ function speichern() {
     var allergien = getSelectedOptions("allergien-select");
     var preferenzen = getSelectedOptions("preferenzen-select");
     var bestätigung = confirm("Möchtest du das Profil speichern?");
-
-    saveProfileData(username, allergien, preferenzen);
 
     console.log("Ausgewählte Allergien:", allergien);
     console.log("Ausgewählte Präferenzen:", preferenzen);
@@ -60,16 +59,25 @@ document.getElementById("profile-form").addEventListener("submit", function(even
 function highlightMatchingMeals(allergien, preferenzen) {
     console.log("Highlighting meals with allergien:", allergien, "and preferenzen:", preferenzen);
 
-    var allMeals = document.querySelectorAll('.meal-item');
-    allMeals.forEach(function (meal) {
-        meal.classList.remove('highlighted');
-    });
+    var allMeals = document.querySelectorAll('.main-content');
+    console.log("Number of meals found:", allMeals.length);
 
-    
     allMeals.forEach(function (meal) {
-        var mealAllergien = meal.classList.contains('gluten-free') ? ['gluten'] : [];
-        var mealPreferenzen = meal.classList.contains('vegetarian') ? ['vegetarisch'] : [];
-        mealPreferenzen.push(meal.classList.contains('vegan') ? 'vegan' : 'fleisch');
+        var mealAllergien = [];
+        var mealPreferenzen = [];
+
+        meal.querySelectorAll('.menu-tags .tag').forEach(function (tag) {
+            if (tag.classList.contains('gluten-free')) {
+                mealAllergien.push('gluten');
+            } else if (tag.classList.contains('vegan')) {
+                mealPreferenzen.push('vegan');
+            } else if (tag.classList.contains('vegetarian')) {
+                mealPreferenzen.push('vegetarian');
+            } else if (tag.classList.contains('other')) {
+                mealAllergien.push('soja');
+            }
+            // Füge weitere Tags hinzu, falls erforderlich
+        });
 
         console.log("Meal allergien:", mealAllergien);
         console.log("Meal preferenzen:", mealPreferenzen);
@@ -82,28 +90,19 @@ function highlightMatchingMeals(allergien, preferenzen) {
             return mealPreferenzen.includes(preferenz);
         });
 
-        if (allergienMatch && preferenzenMatch) {
+        // Hier wird die Klasse highlighted überprüft
+        var highlightedClass = meal.classList.contains('highlighted');
+
+        if (allergienMatch && preferenzenMatch && !highlightedClass) {
+            console.log("Meal should be highlighted:", meal);
             meal.classList.add('highlighted');
+        } else if (!allergienMatch || !preferenzenMatch) {
+            console.log("Meal should not be highlighted:", meal);
+            meal.classList.remove('highlighted');
         }
     });
 }
 
 
-function saveProfileData(username, allergien, preferenzen) {
-    var userProfile = {
-        username: username,
-        allergien: allergien,
-        preferenzen: preferenzen,
-    };
 
-    localStorage.setItem("userProfile", JSON.stringify(userProfile));
-}
-
-function displayUserProfile() {
-    var userProfile = JSON.parse(localStorage.getItem("userProfile"));
-
-    document.getElementById("username").textContent = userProfile.username;
-
-    highlightMatchingMeals(userProfile.allergien, userProfile.preferenzen);
-}
 
