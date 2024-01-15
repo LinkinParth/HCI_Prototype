@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     var timerElement = document.getElementById('timer');
-    var seconds = 60; // Change this to the desired countdown time
+    var seconds = 6000; // Change this to the desired countdown time
 
     function updateTimer() {
         timerElement.textContent = seconds + 's';
@@ -49,7 +49,7 @@ function toggleSplitScreen() {
 
         const rightSection = document.createElement('div');
         rightSection.classList.add('split-section');
-        rightSection.innerHTML = '<h2>Daily Menu</h2><p>Replace this with your daily menu content.</p>';
+        rightSection.innerHTML.href = 'dailyMenu.html';
 
         const border = document.createElement('div');
         border.classList.add('split-border');
@@ -63,9 +63,11 @@ function toggleSplitScreen() {
         mainContent.appendChild(splitScreen);
     } else {
         // Reset to the original state
-        mainContent.innerHTML = '<div class="content"><h2>Main Content</h2><p>This is the main content area.</p></div>';
+        window.location.href = 'menu.html';
     }
 }
+
+
 
 
 

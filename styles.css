@@ -195,33 +195,20 @@ main {
 }
 
 /* Split screen styles */
-
-.content {
-    text-align: center;
-}
-
-
 .split-screen {
     display: flex;
+    justify-content: center;
 }
 
 .split-section {
     flex: 1;
-    height: 100%;
-    overflow: hidden;
     position: relative;
 }
 
-.split-section.left-section {
-    border-right: 2px solid #555;
-}
-
-.split-border {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    background-color: #555;
+.left-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-right: 5px; /* Adjust margin as needed */
 }
