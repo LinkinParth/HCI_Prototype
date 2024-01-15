@@ -37,32 +37,33 @@ let splitScreenMode = false;
 function toggleSplitScreen() {
     splitScreenMode = !splitScreenMode;
 
+    const appContainer = document.getElementById('app-container');
     const mainContent = document.querySelector('.main-content');
     const splitScreen = document.createElement('div');
     splitScreen.classList.add('split-screen');
 
     if (splitScreenMode) {
-        // Create left and right sections for split-screen effect
         const leftSection = document.createElement('div');
         leftSection.classList.add('split-section', 'left-section');
         leftSection.innerHTML = mainContent.innerHTML;
 
         const rightSection = document.createElement('div');
         rightSection.classList.add('split-section', 'right-section');
-        rightSection.innerHTML.href =  mainContent.innerHTML;
+        rightSection.innerHTML = mainContent.innerHTML;
 
         const border = document.createElement('div');
         border.classList.add('split-border');
 
-        // Append sections to split-screen
         splitScreen.appendChild(leftSection);
         splitScreen.appendChild(border);
         splitScreen.appendChild(rightSection);
 
-        mainContent.innerHTML = ''; // Clear main content
-        mainContent.appendChild(splitScreen);
+        mainContent.style.display = 'none'; // Hide main content
+        appContainer.innerHTML = ''; // Clear the app container
+        appContainer.appendChild(splitScreen);
     } else {
-        // Reset to the original state
+        mainContent.style.display = 'grid'; // Show main content
+        appContainer.innerHTML = ''; // Reset to the original state// Reset to the original state
         window.location.href = 'menu.html';
     }
 }
@@ -78,25 +79,31 @@ let sideMenuOpen = false;
 function toggleSideMenu() {
     const sideMenu = document.querySelector('.side-menu'); // Use querySelector to select by class
     const mainContent = document.querySelector('.main-content');
+    const splitScreenContent = document.getElementById('app-container');
 
     sideMenuOpen = !sideMenuOpen;
 
     if (sideMenuOpen) {
         sideMenu.style.left = '0'; // Adjust the left property
-        mainContent.style.marginLeft = '250px'; // Adjust the margin as needed
+        mainContent.style.marginLeft = '250px';
+        splitScreenContent.style.marginLeft = '250px'; // Adjust the margin as needed
     } else {
         sideMenu.style.left = '-250px'; // Adjust the left property
         mainContent.style.marginLeft = '0';
+        splitScreenContent.style.marginLeft = '0px';
     }
 }
 
 function collapseSideMenu() {
     const sideMenu = document.getElementById('sideMenu');
     const mainContent = document.querySelector('.main-content');
+    const splitScreenContent = document.getElementById('app-container');
+
     
     sideMenu.style.left = '-250px'; // Adjust based on your sidebar width
     sideMenuOpen = false;
     
     mainContent.style.marginLeft = '0';
+    splitScreenContent.style.marginLeft = '0px';
     
 }
