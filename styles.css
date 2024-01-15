@@ -1,3 +1,5 @@
+/* styles for general layout */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -16,16 +18,21 @@ header {
     align-items: center;
 }
 
-.timer {
-    margin-right: 10px;
-}
-
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
+
+
+/* styles for the timer*/
+.timer {
+    margin-right: 10px;
+}
+
+
+/* styles for the menu boxes  */
 
 .meal-item {
     border: 1px solid #000000;
@@ -185,4 +192,36 @@ main {
 
 .sub-menu li:hover {
     background-color: #777; /* Adjust the color as needed */
+}
+
+/* Split screen styles */
+
+.content {
+    text-align: center;
+}
+
+
+.split-screen {
+    display: flex;
+}
+
+.split-section {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.split-section.left-section {
+    border-right: 2px solid #555;
+}
+
+.split-border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background-color: #555;
 }

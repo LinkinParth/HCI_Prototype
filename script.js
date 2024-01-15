@@ -32,7 +32,40 @@ function Edit() {
 
 /*functions for splitscreen mode*/
 
+let splitScreenMode = false;
 
+function toggleSplitScreen() {
+    splitScreenMode = !splitScreenMode;
+
+    const mainContent = document.querySelector('.main-content');
+    const splitScreen = document.createElement('div');
+    splitScreen.classList.add('split-screen');
+
+    if (splitScreenMode) {
+        // Create left and right sections for split-screen effect
+        const leftSection = document.createElement('div');
+        leftSection.classList.add('split-section', 'left-section');
+        leftSection.innerHTML = mainContent.innerHTML;
+
+        const rightSection = document.createElement('div');
+        rightSection.classList.add('split-section');
+        rightSection.innerHTML = '<h2>Daily Menu</h2><p>Replace this with your daily menu content.</p>';
+
+        const border = document.createElement('div');
+        border.classList.add('split-border');
+
+        // Append sections to split-screen
+        splitScreen.appendChild(leftSection);
+        splitScreen.appendChild(border);
+        splitScreen.appendChild(rightSection);
+
+        mainContent.innerHTML = ''; // Clear main content
+        mainContent.appendChild(splitScreen);
+    } else {
+        // Reset to the original state
+        mainContent.innerHTML = '<div class="content"><h2>Main Content</h2><p>This is the main content area.</p></div>';
+    }
+}
 
 
 
