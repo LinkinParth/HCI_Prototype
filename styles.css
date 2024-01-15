@@ -60,7 +60,6 @@ header {
     border: 2px solid red; /* Ändere den Rand nach Bedarf */
 }
 
-
 .menu-title {
     font-size: 18px;
     margin-top: 0;
@@ -154,6 +153,11 @@ header {
 .show-info-btn:hover + .meal-details {
     display: block;
 }
+
+ .meal-details:hover{
+    display: block;
+ }
+
 
 
 /* styles for the hamburger menu */
