@@ -67,6 +67,17 @@ header {
     color: #000000;
 }
 
+.entrance-identifier {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background-color: #bbbbbb; /* Adjust background color as needed */
+    padding: 6px;
+    border-radius: 10px; /* Adjust border-radius for rounded edges */
+    font-weight: bold;
+    border: 2px solid #000; /* Border color */
+}
+
 .meal-item {
     text-align: center;
     position: relative;
