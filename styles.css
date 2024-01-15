@@ -253,10 +253,3 @@ header {
     background-color: #ffffff;
     padding: 10px;
 }
-
-.split-border {
-    position: absolute;
-    height: 100vh;
-    width: 8px; /* Adjust the width of the border */
-    background-color: #000000; /* Adjust the border color */
-}

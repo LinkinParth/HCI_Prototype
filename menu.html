@@ -11,7 +11,7 @@
     <header>
         <div class="menu-bar">
             <div class="hamburger-menu" onclick="toggleSideMenu()"></div>
-            <p id="username-display"></p>
+            <p onload="displayUserProfile()"></p>
             <div id="sideMenu" class="side-menu">
                 <div class="hamburger-menu-side-menu" onclick="collapseSideMenu()"></div>
                 <ul>
@@ -42,117 +42,116 @@
         </div>
     </header>
     
+    <div id="app-container"></div>
+        <main class="main-content">
+            <div class="meal-item">
+                <h2 class="menu-title">Gemischter Salat </h2>
+                <img class="meal-image" src="https://ess-dich-lecker.de/wp-content/uploads/2019/03/Gemischter-Salat.jpg" alt="Wiener Schnitzel">
+                <p class="menu-price">2 Euro</p>
+                <div class="menu-tags">
+                    <span class="tag vegan">Vegetarian</span>
+                    <!-- Add more tags as needed with their respective classes -->
+                </div>
+                <div class="meal-info">
+                    <button class="show-info-btn">Show Info</button>
+                    <div class="meal-details">
+                        <p>Nährwertangaben: </p>
+                            <p>Brennwert:           632 kJ</p>
+                            <p>Kalorien:            151 kcal</p>
+                            <p>Protein:             16,8 g</p>
+                            <p>Kohlenhydrate:       9,4 g</p>
+                            <p>Fett:                4,7 g</p>
+                        <!-- Add more meal information here -->
+                    </div>
+                </div>
+            </div>
+            <div class="meal-item">
+                <h2 class="menu-title">Pasta Nach Italienischer Art </h2>
+                <img class="meal-image" src="https://mim.p7s1.io/pis/ld/337czChLCVyZ-c1vEwXZAanB-DJ78rnq2V2gRWTHzVV6NywNWMSJCEGmZ4YSENP-WRL0b9lo2z_IfGOSZ1UVD_sTwLKnTfXUhSpLloeDLjGUyBibucBQ9rvoHe8JW2gjBAYsTy6cdVQ/profile:original?w=1070" alt="Wiener Schnitzel">
+                <p class="menu-price">2 Euro</p>
+                <div class="menu-tags">
+                    <span class="tag other">Soja </span>
+                    <!-- Add more tags as needed with their respective classes -->
+                </div>
+                <div class="meal-info">
+                    <button class="show-info-btn">Show Info</button>
+                    <div class="meal-details">
+                        <p>Nährwertangaben: </p>
+                            <p>Brennwert:           1632 kJ</p>
+                            <p>Kalorien:            467 kcal</p>
+                            <p>Protein:             45,6 g</p>
+                            <p>Kohlenhydrate:       56 g</p>
+                            <p>Fett:                53 g</p>
+                        <!-- Add more meal information here -->
+                    </div>
+                </div>
+            </div>
+            <div class="meal-item">
+                <h2 class="menu-title">Wiener Schnitzel </h2>
+                <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">
+                <p class="menu-price">2 Euro</p>
+                <div class="meal-info">
+                    <button class="show-info-btn">Show Info</button>
+                    <div class="meal-details">
+                        <p>Nährwertangaben: </p>
+                            <p>Brennwert:           632 kJ</p>
+                            <p>Kalorien:            151 kcal</p>
+                            <p>Protein:             16,8 g</p>
+                            <p>Kohlenhydrate:       9,4 g</p>
+                            <p>Fett:                4,7 g</p>
+                        <!-- Add more meal information here -->
+                    </div>
+                </div>
+            </div>
+            <div class="meal-item">
+                <h2 class="menu-title">Veganes Schnitzel (wiener Art) </h2>
+                <img class="meal-image" src="https://www.bofrost.de/medias/10573-DE-vegantische-schnitzel-aus-weizen-pic1.jpg-W1400xH1400R1.1?context=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDY1NDY4MXxpbWFnZS9qcGVnfGFETmlMMmhqTVM4NU5qRXlOVEUwTkRJMk9URXdMekV3TlRjelgwUkZYM1psWjJGdWRHbHpZMmhsTFhOamFHNXBkSHBsYkMxaGRYTXRkMlZwZW1WdVgzQnBZekV1YW5CblgxY3hOREF3ZUVneE5EQXdVakV1TVF8MmU0MWM2MzYxZjA4MDE2NzI3YWY1MjYyNDhhNTIyMjgyNWM5NGJkNzY3MWI1MDZiYjIxMTBjN2FiZWJjYWYxZA" alt="Spaghetti Bolognese">
+                <p class="menu-price">3 Euro</p>
+                <div class="menu-tags">
+                    <span class="tag vegan">Vegan</span>
+                    <span class="tag other">Other</span>
+                    <!-- Add more tags as needed with their respective classes -->
+                </div>
+                <div class="meal-info">
+                    <button class="show-info-btn">Show Info</button>
+                    <div class="meal-details">
+                        <p>Nährwertangaben:</p>
+                        <p>Brennwert:           1145 kJ</p>
+                        <p>Kalorien:            285 kcal</p>
+                        <p>Protein:             9,2 g</p>
+                        <p>Kohlenhydrate:       18 g</p>
+                        <p>Fett:                18 g</p>
+                        <!-- Add more meal information here -->
+                    </div>
+                </div>
+            </div>
+            <div class="meal-item">
+                <h2 class="menu-title">Pasta Vegan + Gluten Frei  </h2>
+                <img class="meal-image" src="https://thepeskyvegan.com/wp-content/uploads/2021/03/tomato-tahini-pasta-vegan-gluten-free-wide-feature.jpg" alt="Spaghetti Bolognese">
+                <p class="menu-price">3 Euro</p>
+                <div class="menu-tags">
+                    <span class="tag vegan">Vegan</span>
+                    <span class="tag gluten-free">Gluten Free</span>
+                    <!-- Add more tags as needed with their respective classes -->
+                </div>
+                <div class="meal-info">
+                    <button class="show-info-btn">Show Info</button>
+                    <div class="meal-details">
+                        <p>Nährwertangaben:</p>
+                        <p>Brennwert:           1145 kJ</p>
+                        <p>Kalorien:            285 kcal</p>
+                        <p>Protein:             9,2 g</p>
+                        <p>Kohlenhydrate:       18 g</p>
+                        <p>Fett:                18 g</p>
+                        <!-- Add more meal information here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
 
-    <main class="main-content">
-        <div class="meal-item">
-            <h2 class="menu-title">Gemischter Salat </h2>
-            <img class="meal-image" src="https://ess-dich-lecker.de/wp-content/uploads/2019/03/Gemischter-Salat.jpg" alt="Wiener Schnitzel">
-            <p class="menu-price">2 Euro</p>
-            <div class="menu-tags">
-                <span class="tag vegan">Vegetarian</span>
-                <!-- Add more tags as needed with their respective classes -->
-            </div>
-            <div class="meal-info">
-                <button class="show-info-btn">Show Info</button>
-                <div class="meal-details">
-                    <p>Nährwertangaben: </p>
-                        <p>Brennwert:           632 kJ</p>
-                        <p>Kalorien:            151 kcal</p>
-                        <p>Protein:             16,8 g</p>
-                        <p>Kohlenhydrate:       9,4 g</p>
-                        <p>Fett:                4,7 g</p>
-                    <!-- Add more meal information here -->
-                </div>
-            </div>
-        </div>
-        <div class="meal-item">
-            <h2 class="menu-title">Pasta Nach Italienischer Art </h2>
-            <img class="meal-image" src="https://mim.p7s1.io/pis/ld/337czChLCVyZ-c1vEwXZAanB-DJ78rnq2V2gRWTHzVV6NywNWMSJCEGmZ4YSENP-WRL0b9lo2z_IfGOSZ1UVD_sTwLKnTfXUhSpLloeDLjGUyBibucBQ9rvoHe8JW2gjBAYsTy6cdVQ/profile:original?w=1070" alt="Wiener Schnitzel">
-            <p class="menu-price">2 Euro</p>
-            <div class="menu-tags">
-                <span class="tag other">Soja </span>
-                <!-- Add more tags as needed with their respective classes -->
-            </div>
-            <div class="meal-info">
-                <button class="show-info-btn">Show Info</button>
-                <div class="meal-details">
-                    <p>Nährwertangaben: </p>
-                        <p>Brennwert:           1632 kJ</p>
-                        <p>Kalorien:            467 kcal</p>
-                        <p>Protein:             45,6 g</p>
-                        <p>Kohlenhydrate:       56 g</p>
-                        <p>Fett:                53 g</p>
-                    <!-- Add more meal information here -->
-                </div>
-            </div>
-        </div>
-        <div class="meal-item">
-            <h2 class="menu-title">Wiener Schnitzel </h2>
-            <img class="meal-image" src="https://www.gutekueche.at/storage/media/recipe/106126/conv/wiener-schnitzel-default.jpg" alt="Wiener Schnitzel">
-            <p class="menu-price">2 Euro</p>
-            <div class="meal-info">
-                <button class="show-info-btn">Show Info</button>
-                <div class="meal-details">
-                    <p>Nährwertangaben: </p>
-                        <p>Brennwert:           632 kJ</p>
-                        <p>Kalorien:            151 kcal</p>
-                        <p>Protein:             16,8 g</p>
-                        <p>Kohlenhydrate:       9,4 g</p>
-                        <p>Fett:                4,7 g</p>
-                    <!-- Add more meal information here -->
-                </div>
-            </div>
-        </div>
-        <div class="meal-item">
-            <h2 class="menu-title">Veganes Schnitzel (wiener Art) </h2>
-            <img class="meal-image" src="https://www.bofrost.de/medias/10573-DE-vegantische-schnitzel-aus-weizen-pic1.jpg-W1400xH1400R1.1?context=bWFzdGVyfHByb2R1Y3QtaW1hZ2VzfDY1NDY4MXxpbWFnZS9qcGVnfGFETmlMMmhqTVM4NU5qRXlOVEUwTkRJMk9URXdMekV3TlRjelgwUkZYM1psWjJGdWRHbHpZMmhsTFhOamFHNXBkSHBsYkMxaGRYTXRkMlZwZW1WdVgzQnBZekV1YW5CblgxY3hOREF3ZUVneE5EQXdVakV1TVF8MmU0MWM2MzYxZjA4MDE2NzI3YWY1MjYyNDhhNTIyMjgyNWM5NGJkNzY3MWI1MDZiYjIxMTBjN2FiZWJjYWYxZA" alt="Spaghetti Bolognese">
-            <p class="menu-price">3 Euro</p>
-            <div class="menu-tags">
-                <span class="tag vegan">Vegan</span>
-                <span class="tag other">Other</span>
-                <!-- Add more tags as needed with their respective classes -->
-            </div>
-            <div class="meal-info">
-                <button class="show-info-btn">Show Info</button>
-                <div class="meal-details">
-                    <p>Nährwertangaben:</p>
-                    <p>Brennwert:           1145 kJ</p>
-                    <p>Kalorien:            285 kcal</p>
-                    <p>Protein:             9,2 g</p>
-                    <p>Kohlenhydrate:       18 g</p>
-                    <p>Fett:                18 g</p>
-                    <!-- Add more meal information here -->
-                </div>
-            </div>
-        </div>
-        <div class="meal-item">
-            <h2 class="menu-title">Pasta Vegan + Gluten Frei  </h2>
-            <img class="meal-image" src="https://thepeskyvegan.com/wp-content/uploads/2021/03/tomato-tahini-pasta-vegan-gluten-free-wide-feature.jpg" alt="Spaghetti Bolognese">
-            <p class="menu-price">3 Euro</p>
-            <div class="menu-tags">
-                <span class="tag vegan">Vegan</span>
-                <span class="tag gluten-free">Gluten Free</span>
-                <!-- Add more tags as needed with their respective classes -->
-            </div>
-            <div class="meal-info">
-                <button class="show-info-btn">Show Info</button>
-                <div class="meal-details">
-                    <p>Nährwertangaben:</p>
-                    <p>Brennwert:           1145 kJ</p>
-                    <p>Kalorien:            285 kcal</p>
-                    <p>Protein:             9,2 g</p>
-                    <p>Kohlenhydrate:       18 g</p>
-                    <p>Fett:                18 g</p>
-                    <!-- Add more meal information here -->
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <!-- Add footer content if necessary -->
-    </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
