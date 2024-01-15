@@ -16,45 +16,6 @@ header {
     align-items: center;
 }
 
-.clickable-image-profile {
-    margin-right: 0;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-    background: none;
-    color: #fff;
-}
-
-.profile-icon {
-    margin-left: auto;
-    margin-right: 50px;
-    width: 50px;
-    height: 50px;
-}
-
-.additional-buttons {
-    display: none;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    margin-left: 1700px;
-    margin-right: 60px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 1;
-}
-
-.additional-buttons button{
-    width: 10px;
-    padding: 10px;
-    text-align: left;
-    border: none;
-    background: none;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-}
-
 .timer {
     margin-right: 10px;
 }
@@ -64,11 +25,6 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
-}
-
-.language-icons button.selected {
-    background-color: #000000;
-    color: #000000;
 }
 
 .meal-item {
@@ -129,9 +85,6 @@ main {
     background-color: #42A5F5; /* Blue color for other tags */
 }
 
-/* Add more classes and colors for additional tags as needed */
-
-
 .meal-info {
     position: relative;
     margin-top: 10px;
@@ -163,29 +116,6 @@ main {
     display: block;
 }
 
-.split-section {
-    display: inline-block;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.left-section {
-    float: left;
-}
-
-.right-section {
-    float: right;
-}
-
-.split-border {
-    border-left: 2px solid #ccc;
-    height: 100%;
-    margin-left: -2px; /* Compensate for the border width */
-}
-
-.split-screen main {
-    justify-content: center; /* Center items horizontally in split-screen mode */
-}
 
 /* styles for the hamburger menu */
 .hamburger-menu {
