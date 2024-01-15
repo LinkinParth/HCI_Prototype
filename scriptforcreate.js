@@ -65,6 +65,7 @@ function highlightMatchingMeals(allergien, preferenzen) {
         meal.classList.remove('highlighted');
     });
 
+    
     allMeals.forEach(function (meal) {
         var mealAllergien = meal.classList.contains('gluten-free') ? ['gluten'] : [];
         var mealPreferenzen = meal.classList.contains('vegetarian') ? ['vegetarisch'] : [];
