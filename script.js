@@ -48,8 +48,8 @@ function toggleSplitScreen() {
         leftSection.innerHTML = mainContent.innerHTML;
 
         const rightSection = document.createElement('div');
-        rightSection.classList.add('split-section');
-        rightSection.innerHTML.href = 'dailyMenu.html';
+        rightSection.classList.add('split-section', 'right-section');
+        rightSection.innerHTML.href =  mainContent.innerHTML;
 
         const border = document.createElement('div');
         border.classList.add('split-border');
