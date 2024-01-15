@@ -14,10 +14,26 @@
             <div id="sideMenu" class="side-menu">
                 <div class="hamburger-menu-side-menu" onclick="collapseSideMenu()"></div>
                 <ul>
-                    <li onclick="openUserProfile()">User Profile</li>
-                    <li onclick="openLanguageMenu()">Language</li>
+                    <li onclick="openUserProfile()">User Profile
+                        <ul class="sub-menu">
+                            <li onclick="Create()">Create</li>
+                            <li onclick="Edit()">Edit</li>
+                            <li></li>
+                        </ul>
+                    <li onclick="openLanguageMenu()">Language
+                        <ul class="sub-menu">
+                            <li>English</li>
+                            <li>German</li>
+                            <li>Independent</li>
+                        </ul>
+                    </li>
                     <li onclick="openSettingsMenu()">Settings</li>
-                    <li onclick="openSimulationMenu()">Simulation</li>
+                    <li onclick="openSimulationMenu()">Simulation
+                        <ul class="sub-menu">
+                            <li onclick="toggleSplitScreen()">Toggle Split Screen</li>
+                            <!-- Add more sub-menu items as needed -->
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <button class="clickable-image-profile" onclick="handleImageClick()">
@@ -26,6 +42,7 @@
             <div id="timer" class="timer">60s</div>
         </div>
     </header>
+    
 
     <main class="main-content">
         <div class="meal-item">

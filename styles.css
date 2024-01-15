@@ -224,16 +224,35 @@ main {
   .side-menu ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .side-menu li {
+}
+
+.side-menu li {
     color: #ffffff;
     font-size: 16px;
     padding: 10px;
     cursor: pointer;
     border-bottom: 1px solid #555;
-  }
+    transition: background-color 0.3s ease;
+}
 
-  
-  
-  
+.side-menu li:hover {
+    background-color: #555; /* Adjust the color as needed */
+}
+
+.sub-menu {
+    display: none;
+    padding-left: 20px; /* Adjust the indentation as needed */
+}
+
+.side-menu li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    padding: 8px; /* Adjust the padding as needed */
+    transition: background-color 0.3s ease;
+}
+
+.sub-menu li:hover {
+    background-color: #777; /* Adjust the color as needed */
+}
